@@ -1,0 +1,11 @@
+jenkins:
+  build: ./jenkins
+  ports:
+    - "18080:8080"
+  links:
+    - sonarqube:sonarqube
+
+ sonarqube:
+   build: ./sonarqube
+   ports: "19000:9000"
+   
